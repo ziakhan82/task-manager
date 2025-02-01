@@ -16,10 +16,10 @@ export class AppComponent {
   title = 'zia-angular-app';
   users = DUMMY_USERS;
 
-  selectedUserId= 'u1';  // Holds the selected user's ID
+  selectedUserId? : string;  // Holds the selected user's ID
   
   get selectedUser(){
-    return this.users.find((user) => user.id === this.selectedUserId)!;
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectUser(id: string){
